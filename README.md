@@ -20,3 +20,11 @@ npm start
 ```
 
 The app opens at http://localhost:3000.
+
+## Configuration
+
+Create a `.env` file (see `.env.example`) with your own free key from https://pixabay.com/api/docs/:
+
+```
+REACT_APP_PIXABAY_KEY=your-pixabay-key
+```

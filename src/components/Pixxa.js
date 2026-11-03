@@ -9,7 +9,7 @@ function Pixxa() {
     const params = new URLSearchParams(window.location.search);
     const searchQuery = params.get('s');
     if (searchQuery && (searchQuery.toLowerCase() === "cats" || searchQuery.toLowerCase() === "dogs")) {
-      fetch(`https://pixabay.com/api/?key=43766795-c166dc99885636d57eab42a9d&q=${encodeURIComponent(searchQuery)}&image_type=photo&pretty=true`)
+      fetch(`https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABAY_KEY}&q=${encodeURIComponent(searchQuery)}&image_type=photo&pretty=true`)
         .then(response => response.json())
         .then(data => {
           setImages(data.hits.slice(0, 4)); 
